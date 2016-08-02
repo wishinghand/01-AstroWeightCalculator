@@ -1,5 +1,6 @@
 'use strict';
 
+//object store of planets, easy to add more
 var planets = [
     {
         name: "Sun",
@@ -58,6 +59,7 @@ var planets = [
     }
 ];
 
+//dynamically creating the options in the select element
 (function(){
     var select = document.getElementById('planet');
     var docFrag = document.createDocumentFragment();
@@ -72,12 +74,14 @@ var planets = [
     select.appendChild(docFrag);
 }());
 
+//called with onclick on <button> element
 function calculate(){
     var humanWeight = parseFloat(document.getElementById('weight').value);
     var planetMultiplier = parseFloat(document.getElementById('planet').value);
     var output = document.getElementById('output');
     var newWeight = humanWeight * planetMultiplier;
 
+    //two separate if statements for error checking- as elseif didn't really add a benefit
     if (humanWeight <= 0) {
         output.innerHTML = 'I doubt you weigh that little';
         return;
@@ -88,9 +92,10 @@ function calculate(){
         return;
     }
 
-
-
+    // final texual output of the calculation
     output.innerHTML = "Your new weight: " + newWeight;
+
+    //brute force image pairing with the object. Inelegant, but it works. But also brittle.
     switch(planetMultiplier){
         case 27.9:
             output.innerHTML += '<br><img src="' + planets[0].imagePath + '">';
