@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Astro Weight Calculator</title>
+    <!-- pure because it's all I need from bootstrap -->
+    <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/pure-min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <form class="pure-form pure-form-stacked myForm" action="javascript:void(0);">
+        <fieldset>
+            <legend>Be Amazed! Your weight on other Celestial Bodies</legend><br>
+
+            <!-- Input for the user to enter their weight. -->
+            <label for="weight">Enter your weight here</label>
+            <input id="weight" type="weight" placeholder="weight"><br><br>
+
+            <label for="">Select your solar mass below</label>
+            <!-- Planet select, with weight multipler as value -->
+            <!-- planets/values now generated from array in javascript -->
+            <select name="" id="planet">
+                <!-- <option  value="27.9">The Sun   </option>
+                <option  value="0.377">Mercury</option>
+                <option  value="0.9032">Venus</option>
+                <option  value="1">Earth</option>
+                <option  value="0.1655">Moon</option>
+                <option  value="0.3895">Mars</option>
+                <option  value="2.640">Jupiter</option>
+                <option  value="1.139">Saturn</option>
+                <option  value="0.917">Uranus</option>
+                <option  value="1.148">Neptune</option>
+                <option  value="0.06">Pluto</option> -->
+            </select><br><br>
+
+            <!-- Button calls function instead of submitting-->
+            <button type="" onclick="calculate();" class="pure-button pure-button-primary">Press me to find your gains</button>
+        </fieldset>
+
+        <!-- display weight -->
+        <p id="output"></p>
+    </form>
+
+    <script src="index.js"></script>
+</body>
+</html>
