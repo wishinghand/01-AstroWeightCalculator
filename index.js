@@ -81,14 +81,12 @@ function calculate(){
     var output = document.getElementById('output');
     var newWeight = humanWeight * planetMultiplier;
 
-    //two separate if statements for error checking- as elseif didn't really add a benefit
+    //error checking
     if (humanWeight <= 0) {
-        output.innerHTML = 'I doubt you weigh that little';
+        output.innerHTML = 'I doubt you weigh that little- try a positive number';
         return;
-    }
-
-    if(isNaN(newWeight)){
-        output.innerHTML = 'Sorry buddy, you gotta use a number';
+    }else if(isNaN(newWeight)){
+        output.innerHTML = 'Sorry buddy, you gotta use a positive number';
         return;
     }
 
