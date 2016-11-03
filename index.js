@@ -90,5 +90,5 @@ function calculate(){
 
     // final texual output of the calculation
     output.innerHTML = "Your new weight: " + newWeight;
-    output.innerHTML += '<br><img src="' + planet.imagePath + '">';
+    output.innerHTML += '<br><img class="animated fadeIn" src="' + planet.imagePath + '">';
 }
